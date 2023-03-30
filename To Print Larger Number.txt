@@ -1,0 +1,21 @@
+static void Main(string[] args)
+	{
+            Console.WriteLine("Enter two numbers.");
+            Console.Write("Enter first number: ");
+            int a = int.Parse(Console.ReadLine());
+
+            Console.Write("Enter second number: ");
+            int b = int.Parse(Console.ReadLine());
+
+            int biggerNumber;
+            if (b > a)
+            {
+                biggerNumber = b;
+            }
+            else {
+                biggerNumber = a;
+            }
+            Console.WriteLine("The bigger number is: "+ biggerNumber);
+
+        }
+

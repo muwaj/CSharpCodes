@@ -1,0 +1,26 @@
+namespace TryCsharp
+{
+    internal class Overloading
+    {
+        public void sum(int a, int b) { 
+        Console.WriteLine(a+b);
+        }
+        public void sum(int a, int b, int c)
+        {
+            Console.WriteLine(a + b + c);
+            
+        }
+        public void sum(string a, string b)
+        {
+            Console.WriteLine(a + b);
+        }
+        public static void Main(String[] args)
+        {
+            Overloading c = new();
+            c.sum(2, 3);
+            c.sum(2, 3, 5);
+            c.sum("Hello ", "World!");
+        }
+    }
+   
+}

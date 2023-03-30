@@ -1,0 +1,22 @@
+//use 'virtual' in parent class method and 'override' in child method after inheriting 
+namespace TryCsharp
+{
+    public class Overriding
+    {
+        public virtual void Sum() {
+            Console.WriteLine("Parent method");
+        }
+    }
+
+    public class Child : Overriding{
+        public override void Sum()
+        {
+            Console.WriteLine("Child method");
+        }
+        public static void Main(String[] args)
+        {
+            Child c = new Child();
+            c.Sum();
+        }
+    }
+}

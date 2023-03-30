@@ -1,0 +1,25 @@
+//Multiplication of a range of nnumbers
+static void Main(string[] args)
+	{
+	Console.Write("start = ");
+	int start = int.Parse(Console.ReadLine());
+
+	Console.Write("end = ");
+	int end = int.Parse(Console.ReadLine());
+
+	int result = 1;
+	if (start <= end)
+	{
+   		 for (int i = start; i <= end; i++)
+   		 {
+     			   result *= i;
+    		 }
+   	 Console.WriteLine("The multiplication of the range from {0} to {1} is {2}.", start, end, result);
+	}
+	else
+	{
+ 	   Console.WriteLine("Start should be smaller than end");
+	}
+
+       }
+

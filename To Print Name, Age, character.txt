@@ -1,0 +1,16 @@
+static void Main(string[] args)
+        {
+            Console.WriteLine("Enter Name");
+            string name=Console.ReadLine();
+
+            Console.WriteLine("Enter Age");
+            int age = int.Parse(Console.ReadLine());
+
+	    //to read a char
+	    Console.WriteLine("Ener a character: ");
+            char ch = char.Parse(Console.ReadLine());
+
+            Console.WriteLine(name);
+            Console.WriteLine(age);
+	    Console.WriteLine(ch);
+        }
