@@ -1,6 +1,6 @@
 namespace TryCsharp
 {
-    internal class Overloading
+    public class Overloading
     {
         public void sum(int a, int b) { 
         Console.WriteLine(a+b);
