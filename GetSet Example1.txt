@@ -1,0 +1,27 @@
+ public class GetSet2
+    {
+        int id=1;
+        string name=" Annie";
+
+        public int Id {
+            get { return id; }
+            set { id = value; }
+        }
+
+        public string Name {
+            get { return name; }
+            set { name = value; }
+        }
+    }
+
+    public class GetSetChild {
+        static void Main(string[] args)
+        {
+            GetSet2 g2 = new GetSet2();
+            Console.WriteLine("Earlier data: "+g2.Id + g2.Name);
+
+            g2.Id= 2;
+            g2.Name = " Sara";
+            Console.WriteLine("New data after get set: "+g2.Id+ g2.Name);
+        }
+    }
