@@ -1,0 +1,37 @@
+ public abstract class Abstract
+    {
+       public double height, width; 
+        public abstract void AreaM(); 
+    }
+    
+    public class Rectangle : Abstract  
+    {
+        public Rectangle(double height, double width) { 
+            this.height=height;
+            this.width=width;
+        }
+        public override void AreaM()
+        {
+            Console.WriteLine("Area of Rectangle: "+(height*width));
+        }
+    }
+
+    public class Square : Abstract {
+        public Square(double height) { 
+            this.height=height;
+        }
+        public override void AreaM()
+        {
+            Console.WriteLine("Area of square: " + (height * height));
+        }
+
+        static void Main(string[] args)
+        {
+            Square s=new Square(7);
+            s.AreaM();
+
+            Rectangle r = new Rectangle(2,3);
+            r.AreaM();
+        }
+
+    }
