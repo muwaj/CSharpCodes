@@ -1,37 +1,30 @@
- public abstract class Abstract
-    {
-       public double height, width; 
-        public abstract void AreaM(); 
-    }
-    
-    public class Rectangle : Abstract  
-    {
-        public Rectangle(double height, double width) { 
-            this.height=height;
-            this.width=width;
+public abstract class AbstractMeth {
+        public int a;
+        public int b;
+        public AbstractMeth(int a, int b) {
+            this.a = a;
+            this.b = b;
         }
-        public override void AreaM()
-        {
-            Console.WriteLine("Area of Rectangle: "+(height*width));
-        }
+        public abstract void Method1();
     }
 
-    public class Square : Abstract {
-        public Square(double height) { 
-            this.height=height;
+    public class Res : AbstractMeth {  
+        public Res(int c, int d) :base(c,d) {
         }
-        public override void AreaM()
+        public void Sum(int a, int b)
         {
-            Console.WriteLine("Area of square: " + (height * height));
+            Console.WriteLine("number 1 is: " + a);
+            Console.WriteLine("number 2 is: " + b);
         }
+        public override void Method1()
+        {
+            Console.WriteLine("Abstract method called.");
+        }        
 
         static void Main(string[] args)
         {
-            Square s=new Square(7);
-            s.AreaM();
-
-            Rectangle r = new Rectangle(2,3);
-            r.AreaM();
-        }
-
+            Res r= new Res(2,3);
+            r.Sum(r.a, r.b);
+            r.Method1();
+        }       
     }
