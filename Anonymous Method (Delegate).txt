@@ -1,0 +1,6 @@
+delegate void TestDels(string s, int i);
+        static void Main(string[] args)
+        {
+            TestDels td = (s,i) => { Console.WriteLine("Hello "+s+" "+i ); };
+            td.Invoke("Ash",3);
+        }
