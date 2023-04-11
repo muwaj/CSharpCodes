@@ -1,0 +1,40 @@
+namespace ConsoleApp1
+{
+    public class DelegateTypes
+    {
+        public static int Method1(int a, int b, int c)
+        {
+
+            return a + b + c;
+        }
+
+        public static void Method2(int a, int b)
+        {
+            Console.WriteLine(a - b);
+        }
+
+
+        public static bool Method3(int a)
+        {
+            if (a > 5)
+                return true;
+            return false;
+        }
+
+        static void Main(string[] args)
+        {
+
+            Func<int, int, int, int> D1 = Method1;
+            int result = D1.Invoke(2, 3, 4);
+            Console.WriteLine(result);
+
+
+            Action<int, int> D2 = Method2;
+            D2.Invoke(4, 5);
+
+            Predicate<int> D3 = Method3;
+            bool res = D3.Invoke(9);
+            Console.WriteLine(res);
+        }
+    }
+}

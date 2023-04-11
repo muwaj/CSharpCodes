@@ -1,0 +1,43 @@
+namespace ConsoleApp1
+{
+    public delegate int Del1(int a, int b, int c);
+    public delegate void Del2(int a, int b);
+    public delegate bool Del3(int a);
+    public class DelegateTypes
+    {
+
+        public static int Method1(int a, int b, int c)
+        {
+
+            return a + b + c;
+        }
+
+        public static void Method2(int a, int b)
+        {
+            Console.WriteLine(a - b);
+        }
+
+
+        public static bool Method3(int a)
+        {
+            if (a > 5)
+                return true;
+            return false;
+        }
+
+        static void Main(string[] args)
+        {
+
+            Del1 D1 = Method1;
+            double result = D1.Invoke(2, 3, 4);
+            Console.WriteLine(result);
+
+            Del2 D2 = Method2;
+            D2.Invoke(5, 2);
+
+            Del3 D3 = Method3;
+            bool status = D3.Invoke(8);
+            Console.WriteLine(status);
+        }
+    }
+}
